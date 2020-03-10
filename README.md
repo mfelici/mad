@@ -7,10 +7,15 @@ We often have to deal with signals changing their statistical properties over ti
 One possible approach to find the anomalies "following" the signal is to compare its values with the Moving Average of the last N measures. The problem with Moving Averages is that the anomaly we want to identify influences the Average itself.
 
 Suppose you have a signal like this:
+
 ![sample signal](images/graph.png)
+
 As you can see we have a few anomalies (outliers) in this graph. Now if we analyze data distribution with mean and we set a threshold at two standard deviations (2&sigma;) , which should account 95% of the variations in a normal distribution, we get:
+
 ![mean and 2sigma](images/mean.png)
+
 as you can see  only one data point exceed our threshold. But if we replace the *mean* with the *median* and the 2&sigma;  threshold with 2mad, we will get them all:
+
 ![median and 2mad](images/mad.png)
 
 Median Absolute Deviation is defined as:
