@@ -20,11 +20,11 @@ as you can see  only one data point exceed our threshold. But if we replace the 
 
 Median Absolute Deviation is defined as:
 
-**MAD= *Const* * *median* ( |X~i~ - X~med~ )**
+**MAD= *Const* * *median* ( |X<sub>i</sub> - X<sub>med</sub> )**
 
 Where:
-- **X~i~** is the i-th value in the data block
-- **X~med~** is the median of the data block
+- **X<sub>i</sub>** is the i-th value in the data block
+- **X<sub>med</sub>** is the median of the data block
 - **Const** is a *scale factor* depending on input data distribution (1.4826 for "normal" distribution)
 
 As we want to *follow* the signal to calculate the *moving* Median Absolute Deviation we should also set the **size** of the "rolling  window" we will use calculate our MAD. 
